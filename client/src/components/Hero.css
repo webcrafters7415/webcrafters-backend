@@ -1,0 +1,122 @@
+/* agency-website/client/src/components/Hero.css */
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-xl) var(--spacing-lg);
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); /* Blue gradient to match reference */
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><pattern id="pattern" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="2" fill="rgba(255,255,255,0.3)" /><line x1="0" y1="0" x2="30" y2="30" stroke="rgba(255,255,255,0.2)" stroke-width="1" /><line x1="30" y1="0" x2="0" y2="30" stroke="rgba(255,255,255,0.2)" stroke-width="1" /></pattern><rect x="0" y="0" width="100%" height="100%" fill="url(#pattern)" /></svg>');
+  opacity: 0.5;
+}
+
+.hero-content {
+  max-width: 50%;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-md);
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-lg);
+}
+
+.hero-content p .highlight {
+  color: #f1c40f; /* Yellow highlight */
+  font-weight: 700;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: #f1c40f; /* Yellow */
+  color: #2c3e50; /* Dark teal */
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #fff;
+  color: #8e44ad; /* Purple */
+}
+
+.hero-illustration {
+  max-width: 40%;
+  width: 40%;
+  height: 400px; /* Fixed height for the scene */
+  position: relative;
+}
+
+.collaboration-scene {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.collaboration-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .hero-illustration {
+    max-width: 80%;
+    width: 80%;
+    height: 300px;
+  }
+}
+.contact-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.icon-style {
+  font-size: 32px;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.icon-style:hover {
+  color: #0056b3;
+}

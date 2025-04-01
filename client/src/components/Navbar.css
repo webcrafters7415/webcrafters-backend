@@ -1,0 +1,86 @@
+/* agency-website/client/src/components/Navbar.css */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem; /* Space between buttons */
+}
+
+.nav-button {
+  background-color: #fff; /* Default background for all buttons */
+  color: #333; /* Text color */
+  padding: 0.5rem 1rem;
+  border: 2px solid #FF6200; /* Orange border */
+  border-radius: 25px; /* Rounded corners */
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: #FF6200; /* Orange background on hover */
+  color: #fff; /* White text on hover */
+}
+
+.contact-button {
+  background-color: #FF6200; /* Orange background for Contact button by default */
+  color: #fff; /* White text for Contact button */
+}
+
+.contact-button:hover {
+  background-color: #e55a00; /* Slightly darker orange on hover */
+  color: #fff;
+}
+
+.dark-mode-button {
+  background-color: #555;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode-button:hover {
+  background-color: #444;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .nav-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .dark-mode-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}

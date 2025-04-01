@@ -1,0 +1,120 @@
+.testimonials-section {
+  padding: 100px 10%;
+  text-align: center;
+  background: linear-gradient(135deg, #f6f6f6, #eaeaea);
+  transition: background 0.3s ease-in-out;
+}
+
+.testimonials-heading {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  background: linear-gradient(45deg, #ff7eb3, #ff758c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dark-mode .testimonials-section {
+  background: linear-gradient(135deg, #121212, #1a1a1a);
+}
+
+.dark-mode .testimonials-heading {
+  background: linear-gradient(45deg, #ffcc70, #ff9966);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.testimonial-card {
+  background: white;
+  color: black;
+  padding: 40px;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .testimonial-card {
+  background: #222;
+  color: white;
+}
+
+.testimonial-text {
+  font-size: 1.4rem;
+  font-style: italic;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff758c;
+  margin-top: 10px;
+}
+
+.testimonial-role {
+  font-size: 1rem;
+  color: #666;
+}
+
+.dark-mode .testimonial-role {
+  color: #bbb;
+}
+
+.testimonial-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.testimonial-btn {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  margin: 0 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.testimonial-btn:hover {
+  background: linear-gradient(135deg, #ff4e69, #ff6a92);
+  transform: scale(1.1);
+}
+
+.dark-mode .testimonial-btn {
+  background: linear-gradient(135deg, #ff9966, #ffcc70);
+}
+
+.dark-mode .testimonial-btn:hover {
+  background: linear-gradient(135deg, #ff7744, #ffbb55);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .testimonials-heading {
+    font-size: 2.5rem;
+  }
+
+  .testimonial-card {
+    max-width: 90%;
+  }
+
+  .testimonial-btn {
+    font-size: 1.2rem;
+    padding: 8px 12px;
+  }
+}
+

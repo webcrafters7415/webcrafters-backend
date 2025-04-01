@@ -1,0 +1,43 @@
+/* agency-website/client/src/index.css */
+:root {
+  --primary-color: #2c3e50; /* Dark teal */
+  --secondary-color: #fff;
+  --accent-color: #8e44ad; /* Purple */
+  --highlight-color: #f1c40f; /* Yellow */
+  --neutral-color: #f5f5f5;
+  --text-color: #333;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+}
+
+[data-theme="dark"] {
+  --primary-color: #ecf0f1; /* Light gray */
+  --secondary-color: #2c3e50; /* Dark teal */
+  --accent-color: #f1c40f; /* Yellow */
+  --neutral-color: #34495e; /* Darker teal */
+  --text-color: #ecf0f1; /* Light gray */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  background: var(--secondary-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}

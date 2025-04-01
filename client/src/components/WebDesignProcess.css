@@ -1,0 +1,240 @@
+/* agency-website/client/src/components/WebDesignProcess.css */
+.web-design-process-section {
+  padding: var(--spacing-xl) var(--spacing-lg);
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); /* Gradient background */
+  position: relative;
+  overflow: hidden;
+}
+
+.web-design-process-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.web-design-process-container h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-lg);
+  color: #fff; /* White for heading on gradient background */
+  position: relative;
+  display: inline-block;
+}
+
+.web-design-process-container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 4px;
+  background: #f1c40f; /* Yellow underline */
+  border-radius: 2px;
+}
+
+.process-carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 300px; /* Ensure space for animation */
+}
+
+.process-step {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  padding: var(--spacing-md);
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  max-width: 600px;
+  width: 100%;
+  color: #fff;
+}
+
+.process-step h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  color: #f1c40f; /* Yellow for step title */
+}
+
+.step-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+  color: #fff;
+}
+
+.sub-points {
+  list-style: none;
+  padding: 0;
+}
+
+.sub-points li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fff;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.sub-points li::before {
+  content: '➔';
+  position: absolute;
+  left: 0;
+  color: #f1c40f; /* Yellow arrow */
+  font-size: 1.2rem;
+}
+
+.nav-arrow {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.nav-arrow:hover {
+  background: rgba(241, 196, 15, 0.5); /* Yellow tint on hover */
+}
+
+.left-arrow {
+  left: 20px;
+}
+
+.right-arrow {
+  right: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #f1c40f;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #f1c40f;
+  color: #1e3a8a;
+}
+
+/* Dark mode styles (optional, since this section has a fixed gradient background) */
+.dark-mode .web-design-process-section {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); /* Same gradient */
+}
+
+.dark-mode .web-design-process-container h2 {
+  color: #fff;
+}
+
+.dark-mode .web-design-process-container h2::after {
+  background: #f1c40f;
+}
+
+.dark-mode .process-step {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .process-step h3 {
+  color: #f1c40f;
+}
+
+.dark-mode .step-description,
+.dark-mode .sub-points li {
+  color: #fff;
+}
+
+.dark-mode .sub-points li::before {
+  color: #f1c40f;
+}
+
+.dark-mode .nav-arrow {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.dark-mode .nav-arrow:hover {
+  background: rgba(241, 196, 15, 0.5);
+}
+
+.dark-mode .cta-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid #f1c40f;
+  color: #fff;
+}
+
+.dark-mode .cta-button:hover {
+  background: #f1c40f;
+  color: #1e3a8a;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .web-design-process-section {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .web-design-process-container h2 {
+    font-size: 2rem;
+  }
+
+  .process-step {
+    max-width: 100%;
+    padding: var(--spacing-sm);
+  }
+
+  .process-step h3 {
+    font-size: 1.5rem;
+  }
+
+  .step-description {
+    font-size: 1rem;
+  }
+
+  .sub-points li {
+    font-size: 0.95rem;
+  }
+
+  .nav-arrow {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .left-arrow {
+    left: 10px;
+  }
+
+  .right-arrow {
+    right: 10px;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+}
