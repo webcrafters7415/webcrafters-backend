@@ -53,6 +53,12 @@ app.post('/api/contact', async (req, res) => {
   }
 });
 
+
+app.get('/', (req, res) => {
+  res.send('✅ Webcrafters backend is live and working!');
+});
+
+
 // Start the Server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
