@@ -12,12 +12,12 @@ app.use(express.json()); // Parse JSON request body
 
 // PostgreSQL Database Connection
 const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "agency_db",
-  password: "avi94254",
-  port: 5432,
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false, // Required for hosted PostgreSQL (like Render)
+  },
 });
+
 
 // Test database connection
 pool.connect((err) => {
