@@ -15,7 +15,7 @@ const Projects = () => {
       description:
         'A high-end e-commerce platform for a luxury fashion brand, featuring AI-driven personalization, WebGL animations, and a headless CMS for seamless content management.',
       technologies: ['React', 'Node.js', 'WebGL', 'Shopify API', 'Headless CMS'],
-      image: '/images/luxury-ecommerce-desktop.jpg.png',
+      image: `${process.env.PUBLIC_URL}/images/luxury-ecommerce-desktop.jpg`,
     },
     {
       title: 'Corporate Finance Portal',
@@ -23,7 +23,7 @@ const Projects = () => {
       description:
         'A secure, responsive portal for a financial institution, with custom API integrations, WCAG-compliant accessibility, and proactive cybersecurity measures.',
       technologies: ['React', 'Express', 'MongoDB', 'Custom APIs', 'Penetration Testing'],
-      image: '/images/corporate-finance-desktop.jpg.jpeg',
+      image: `${process.env.PUBLIC_URL}/images/corporate-finance-desktop.jpg`,
     },
     {
       title: 'Creative Agency Showcase',
@@ -31,7 +31,7 @@ const Projects = () => {
       description:
         'An immersive website for a creative agency, featuring 3D animations, parallax effects, and a sustainable design with eco-friendly hosting.',
       technologies: ['React', 'Three.js', 'GSAP', 'Green Hosting'],
-      image: '/images/creative-agency-desktop.jpg.png',
+      image: `${process.env.PUBLIC_URL}/images/creative-agency-desktop.jpg`,
     },
     {
       title: 'Online Learning Platform',
@@ -39,7 +39,7 @@ const Projects = () => {
       description:
         'A scalable e-commerce platform for online courses, with performance optimization, CRO through A/B testing, and 24/7 support for uninterrupted access.',
       technologies: ['React', 'Next.js', 'Stripe API', 'A/B Testing', '24/7 Support'],
-      image: '/images/online-learning-desktop.jpg.jpeg',
+      image: `${process.env.PUBLIC_URL}/images/online-learning-desktop.jpg`,
     },
     {
       title: 'Tech Startup Landing Page',
@@ -47,7 +47,7 @@ const Projects = () => {
       description:
         'A sleek landing page for a tech startup, designed with conversion rate optimization, accessibility-first principles, and a headless CMS for scalability.',
       technologies: ['React', 'Gatsby', 'Headless CMS', 'CRO', 'WCAG 2.1'],
-      image: '/images/tech-startup-desktop.jpg.jpeg',
+      image: `${process.env.PUBLIC_URL}/images/tech-startup-desktop.jpg`,
     },
     {
       title: 'Interactive Art Gallery',
@@ -55,7 +55,7 @@ const Projects = () => {
       description:
         'An interactive online gallery with WebGL-powered 3D exhibits, immersive storytelling, and sustainable hosting to reduce its carbon footprint.',
       technologies: ['React', 'WebGL', 'Three.js', 'Sustainable Hosting'],
-      image: '/images/art-gallery-desktop.jpg.jpg',
+      image: `${process.env.PUBLIC_URL}/images/art-gallery-desktop.jpg`,
     },
   ];
 

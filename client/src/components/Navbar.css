@@ -1,10 +1,11 @@
-/* agency-website/client/src/components/Navbar.css */
+/* Core styling */
 .navbar {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
 }
 
 .navbar-container {
@@ -12,75 +13,123 @@
   margin: 0 auto;
   padding: 1rem 2rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #222;
+  margin-right: 2rem;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
   align-items: center;
 }
 
-.nav-links {
+.nav-links li {
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 1rem; /* Space between buttons */
 }
 
 .nav-button {
-  background-color: #fff; /* Default background for all buttons */
-  color: #333; /* Text color */
   padding: 0.5rem 1rem;
-  border: 2px solid #FF6200; /* Orange border */
-  border-radius: 25px; /* Rounded corners */
-  text-decoration: none;
+  border-radius: 20px;
+  border: 2px solid #ff6200;
+  background-color: transparent;
+  color: #ff6200;
   font-weight: 500;
-  font-size: 1rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .nav-button:hover {
-  background-color: #FF6200; /* Orange background on hover */
-  color: #fff; /* White text on hover */
+  background-color: #ff6200;
+  color: #fff;
 }
 
 .contact-button {
-  background-color: #FF6200; /* Orange background for Contact button by default */
-  color: #fff; /* White text for Contact button */
+  background-color: #ff6200;
+  color: #fff;
 }
 
 .contact-button:hover {
-  background-color: #e55a00; /* Slightly darker orange on hover */
-  color: #fff;
+  background-color: #e55a00;
 }
 
+/* Dark mode button */
 .dark-mode-button {
   background-color: #555;
-  color: #fff;
+  color: white;
   padding: 0.5rem 1rem;
   border: none;
-  border-radius: 25px;
-  font-weight: 500;
-  font-size: 1rem;
+  border-radius: 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .dark-mode-button:hover {
   background-color: #444;
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
   .nav-links {
-    flex-wrap: wrap;
-    gap: 0.5rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 2rem;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
   }
 
   .nav-button {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.9rem;
+    width: 100%;
+    margin: 0.4rem 0;
+    text-align: left;
   }
 
   .dark-mode-button {
-    padding: 0.4rem 0.8rem;
+    align-self: flex-start;
+  }
+}
+
+/* Mobile */
+@media (max-width: 425px) {
+  .navbar-container {
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-button,
+  .dark-mode-button {
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .nav-button,
+  .dark-mode-button {
+    font-size: 0.85rem;
   }
 }

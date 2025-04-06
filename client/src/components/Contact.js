@@ -17,7 +17,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/api/contact", {
+      const response = await fetch("https://webcrafters-backend.onrender.com/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

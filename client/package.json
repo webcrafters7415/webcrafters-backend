@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "proxy": "http://localhost:5000",
   "private": true,
-  "homepage": "https://webcrafters7415.github.io/webcrafters",
+  "homepage": "https://webcrafters7415.github.io/agency-website",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
