@@ -7,24 +7,27 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors()); // Enable CORS (if frontend and backend are on different servers)
-app.use(express.json()); // Parse JSON request body
+app.use(cors());
+app.use(express.json());
 
-// PostgreSQL Database Connection
+// PostgreSQL Pool Setup (Updated to use individual DB params)
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
   ssl: {
-    rejectUnauthorized: false, // Required for hosted PostgreSQL (like Render)
+    rejectUnauthorized: false,
   },
 });
-
 
 // Test database connection
 pool.connect((err) => {
   if (err) {
-    console.error('Database connection error:', err);
+    console.error('❌ Database connection error:', err);
   } else {
-    console.log('Connected to PostgreSQL database');
+    console.log('✅ Connected to PostgreSQL database');
   }
 });
 
@@ -33,33 +36,29 @@ app.post('/api/contact', async (req, res) => {
   try {
     const { name, email, message } = req.body;
 
-    // Check if all fields are provided
     if (!name || !email || !message) {
       return res.status(400).json({ error: 'All fields are required' });
     }
 
-    // Insert data into PostgreSQL
     const result = await pool.query(
       'INSERT INTO contacts (name, email, message) VALUES ($1, $2, $3) RETURNING *',
       [name, email, message]
     );
 
-    console.log('New contact saved:', result.rows[0]);
+    console.log('📥 New contact saved:', result.rows[0]);
 
     res.status(201).json({ message: 'Message sent successfully!' });
   } catch (error) {
-    console.error('Error saving contact:', error);
+    console.error('❌ Error saving contact:', error);
     res.status(500).json({ error: 'Server error. Please try again later.' });
   }
 });
-
 
 app.get('/', (req, res) => {
   res.send('✅ Webcrafters backend is live and working!');
 });
 
-
 // Start the Server
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  console.log(`🚀 Server running on port ${PORT}`);
 });
