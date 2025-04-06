@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 // PostgreSQL Pool Setup (Updated to use individual DB params)
-const { Pool } = require("pg");
+
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
